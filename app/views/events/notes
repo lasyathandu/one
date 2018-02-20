@@ -1,0 +1,19 @@
+
+
+
+Mvc - Design pattern
+
+M- Model- model active record it will data and function and methods.
+V- Views - it consists html
+C- Controller - actions
+
+
+
+User interface to request goes to routes (config/routes.rb)
+from routes.rb it will redirect_to controller (http : new, create, show, edit, update, index, delete)
+ new record creation - when use open the new application form @event = Event.new it will goes to new.html.erb - @event 
+ render _form.html.erb
+ form_for @event do 
+ create - the details that user added in the new page  create action params @event = Event.new(event_params), @event.save
+redirect events_path
+event validates :name, presence :true 

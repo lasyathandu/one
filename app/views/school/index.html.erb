@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head><br>
+<div class="container">
+  <div class="row"><br>
+
+  <p id="notice"><%= notice %></p>
+  <h1> Hello Ruby Welcome </h1>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>univercity</th>
+        <th>location</th>
+        <th>city</th>
+        <th colspan="4">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @school.each do |school| %>
+        <tr>
+          <td><%= school.name %></td>
+          <td><%= school.univercity %></td>
+          <td><%= school.location %></td>
+          <td><%= school.city %></td>
+          <td><%= link_to 'Show', school %></td>
+          <td><%= link_to 'Edit', edit_school_path(school) %></td>
+          <td><%= link_to 'Delete', school, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New school', new_school_path %>
+
+  </div>
+</div>

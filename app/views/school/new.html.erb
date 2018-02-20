@@ -1,0 +1,6 @@
+<h1> NEW School</h1>
+<%= @school %>
+<%= form_for(@school) do |f| %>
+<%= render(:partial => 'form', :locals => {:f => f}) %>
+<%= f.submit("create school")  %>
+<% end %>

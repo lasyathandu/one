@@ -1,0 +1,6 @@
+
+<h2>Update Evetn</h2>
+ <%= form_for(@school) do |f| %> 	 
+ <%= render(:partial => 'form', :locals => {:f => f}) %>
+ <%= f.submit('update school') %>
+ <% end %>

@@ -1,0 +1,6 @@
+<h2>Delete school</h2>
+<%= form_for(@school, :method => 'delete') do |f| %>
+<p> Are you sure YOu want to permanently delete this school?</p>
+<P>
+<%= f.school.name %>
+<%= f.submit('Delete school')
